@@ -1,0 +1,168 @@
+<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="800" fill="#f8f9fa"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="600" height="120" fill="#2c3e50"/>
+  
+  <!-- Name -->
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">
+    NGUEMA NTOUGOU
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="300" y="80" font-family="Arial, sans-serif" font-size="16" fill="#ecf0f1" text-anchor="middle">
+    Professionnel
+  </text>
+  
+  <!-- Contact Info Section -->
+  <rect x="20" y="140" width="560" height="80" fill="white" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+  
+  <text x="40" y="165" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+    INFORMATIONS DE CONTACT
+  </text>
+  
+  <text x="40" y="185" font-family="Arial, sans-serif" font-size="12" fill="#34495e">
+    📧 nguema.ntougou@email.com
+  </text>
+  
+  <text x="300" y="185" font-family="Arial, sans-serif" font-size="12" fill="#34495e">
+    📱 +33 6 12 34 56 78
+  </text>
+  
+  <text x="40" y="205" font-family="Arial, sans-serif" font-size="12" fill="#34495e">
+    📍 Paris, France
+  </text>
+  
+  <text x="300" y="205" font-family="Arial, sans-serif" font-size="12" fill="#34495e">
+    🔗 LinkedIn: nguema-ntougou
+  </text>
+  
+  <!-- Experience Section -->
+  <rect x="20" y="240" width="560" height="200" fill="white" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+  
+  <text x="40" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+    EXPÉRIENCE PROFESSIONNELLE
+  </text>
+  
+  <!-- Experience 1 -->
+  <text x="40" y="290" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#34495e">
+    Consultant Senior • ABC Consulting
+  </text>
+  <text x="450" y="290" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">
+    2020 - Présent
+  </text>
+  
+  <text x="40" y="308" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Gestion de projets stratégiques pour clients internationaux
+  </text>
+  <text x="40" y="322" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Développement de solutions innovantes et optimisation des processus
+  </text>
+  
+  <!-- Experience 2 -->
+  <text x="40" y="350" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#34495e">
+    Analyste Business • XYZ Corporation
+  </text>
+  <text x="450" y="350" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">
+    2018 - 2020
+  </text>
+  
+  <text x="40" y="368" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Analyse des données et création de rapports de performance
+  </text>
+  <text x="40" y="382" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Collaboration avec équipes multidisciplinaires
+  </text>
+  
+  <!-- Education Section -->
+  <rect x="20" y="460" width="560" height="120" fill="white" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+  
+  <text x="40" y="485" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+    FORMATION
+  </text>
+  
+  <text x="40" y="510" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#34495e">
+    Master en Management International
+  </text>
+  <text x="450" y="510" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">
+    2016 - 2018
+  </text>
+  
+  <text x="40" y="528" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    École Supérieure de Commerce, Paris
+  </text>
+  
+  <text x="40" y="550" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#34495e">
+    Licence en Économie et Gestion
+  </text>
+  <text x="450" y="550" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">
+    2013 - 2016
+  </text>
+  
+  <text x="40" y="568" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    Université Sorbonne, Paris
+  </text>
+  
+  <!-- Skills Section -->
+  <rect x="20" y="600" width="270" height="180" fill="white" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+  
+  <text x="40" y="625" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+    COMPÉTENCES
+  </text>
+  
+  <text x="40" y="650" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#34495e">
+    Techniques:
+  </text>
+  <text x="40" y="668" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Excel avancé, PowerBI
+  </text>
+  <text x="40" y="682" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • SQL, Python (bases)
+  </text>
+  <text x="40" y="696" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Gestion de projet (Agile)
+  </text>
+  
+  <text x="40" y="720" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#34495e">
+    Langues:
+  </text>
+  <text x="40" y="738" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Français (natif)
+  </text>
+  <text x="40" y="752" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Anglais (courant)
+  </text>
+  <text x="40" y="766" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    • Espagnol (intermédiaire)
+  </text>
+  
+  <!-- Interests Section -->
+  <rect x="310" y="600" width="270" height="180" fill="white" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+  
+  <text x="330" y="625" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+    CENTRES D'INTÉRÊT
+  </text>
+  
+  <text x="330" y="650" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    🏃‍♂️ Course à pied et fitness
+  </text>
+  <text x="330" y="668" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    📚 Lecture (économie, management)
+  </text>
+  <text x="330" y="686" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    🎵 Musique et concerts
+  </text>
+  <text x="330" y="704" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    ✈️ Voyages et découvertes culturelles
+  </text>
+  <text x="330" y="722" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    🤝 Bénévolat associatif
+  </text>
+  <text x="330" y="740" font-family="Arial, sans-serif" font-size="11" fill="#34495e">
+    📱 Veille technologique
+  </text>
+  
+  <!-- Footer line -->
+  <line x1="20" y1="790" x2="580" y2="790" stroke="#bdc3c7" stroke-width="2"/>
+</svg>

@@ -1,0 +1,50 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="wood-3d-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4B3621"/>
+      <stop offset="50%" stop-color="#7C5D41"/>
+      <stop offset="100%" stop-color="#4B3621"/>
+    </linearGradient>
+
+    <linearGradient id="front-wood-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8C6F5A"/>
+      <stop offset="100%" stop-color="#6E5642"/>
+    </linearGradient>
+    
+    <linearGradient id="handle-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2D183"/>
+      <stop offset="100%" stop-color="#A67B46"/>
+    </linearGradient>
+  </defs>
+
+  <g id="desk-3d-model">
+
+    <polygon points="100,100 800,100 850,200 50,200" fill="url(#wood-3d-gradient)" stroke="#2C1E11" stroke-width="2"/>
+    
+    <rect x="300" y="200" width="300" height="200" fill="#4B3621" stroke="#7C5D41" stroke-width="2"/>
+
+    <rect x="300" y="200" width="300" height="100" fill="url(#front-wood-gradient)"/>
+    <rect x="425" y="220" width="50" height="10" rx="5" fill="url(#handle-gradient)"/>
+
+    <g id="left-drawers">
+      <polygon points="50,200 300,200 300,550 50,550" fill="url(#wood-3d-gradient)"/>
+      <rect x="70" y="220" width="210" height="100" fill="url(#front-wood-gradient)"/>
+      <circle cx="175" cy="270" r="10" fill="url(#handle-gradient)"/>
+      <rect x="70" y="340" width="210" height="100" fill="url(#front-wood-gradient)"/>
+      <circle cx="175" cy="390" r="10" fill="url(#handle-gradient)"/>
+    </g>
+
+    <g id="right-drawers">
+      <polygon points="850,200 600,200 600,550 850,550" fill="url(#wood-3d-gradient)"/>
+      <rect x="620" y="220" width="210" height="100" fill="url(#front-wood-gradient)"/>
+      <circle cx="725" cy="270" r="10" fill="url(#handle-gradient)"/>
+      <rect x="620" y="340" width="210" height="100" fill="url(#front-wood-gradient)"/>
+      <circle cx="725" cy="390" r="10" fill="url(#handle-gradient)"/>
+    </g>
+
+    <rect x="60" y="550" width="20" height="50" fill="#4B3621"/>
+    <rect x="820" y="550" width="20" height="50" fill="#4B3621"/>
+   
+  </g>
+</svg>

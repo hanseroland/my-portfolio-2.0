@@ -1,0 +1,126 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dégradés -->
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d8d8d8"/>
+      <stop offset="100%" style="stop-color:#b0b0b0"/>
+    </linearGradient>
+    <linearGradient id="screenBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#111"/>
+      <stop offset="100%" style="stop-color:#000"/>
+    </linearGradient>
+    <linearGradient id="keyboardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e2e2e"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="trackpadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0e0e0"/>
+      <stop offset="100%" style="stop-color:#c0c0c0"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Base (corps inférieur) -->
+  <rect x="115" y="345" width="570" height="250" rx="12" 
+        fill="url(#bodyGradient)" stroke="#999" stroke-width="1" filter="url(#shadow)"/>
+  
+  <!-- Écran (partie supérieure) -->
+  <rect x="115" y="60" width="570" height="280" rx="12" 
+        fill="url(#screenBorder)" stroke="#222" stroke-width="1"/>
+  
+  <!-- Zone de l’écran (affichage) -->
+  <rect x="135" y="75" width="530" height="250" rx="4" 
+        fill="url(#screenGradient)"/>
+  
+  <!-- Écran gradient coloré -->
+  <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#0f3460"/>
+    <stop offset="25%" style="stop-color:#16213e"/>
+    <stop offset="50%" style="stop-color:#e94560"/>
+    <stop offset="75%" style="stop-color:#f39c12"/>
+    <stop offset="100%" style="stop-color:#6a00f4"/>
+  </linearGradient>
+  
+  <!-- Charnière -->
+  <rect x="120" y="335" width="560" height="20" rx="3" fill="#888"/>
+  
+  <!-- Zone du clavier -->
+  <rect x="140" y="360" width="520" height="130" rx="6" fill="url(#keyboardGradient)"/>
+  
+  <!-- Touch Bar -->
+  <rect x="150" y="360" width="500" height="10" rx="3" fill="#111"/>
+  
+  <!-- Touches simplifiées -->
+  <g fill="#333" stroke="#555" stroke-width="0.3">
+    <!-- 6 colonnes, 5 rangées -->
+    <rect x="160" y="375" width="40" height="12" rx="2"/>
+    <rect x="210" y="375" width="40" height="12" rx="2"/>
+    <rect x="260" y="375" width="40" height="12" rx="2"/>
+    <rect x="310" y="375" width="40" height="12" rx="2"/>
+    <rect x="360" y="375" width="40" height="12" rx="2"/>
+    <rect x="410" y="375" width="40" height="12" rx="2"/>
+    <rect x="460" y="375" width="40" height="12" rx="2"/>
+    <rect x="510" y="375" width="40" height="12" rx="2"/>
+    <rect x="560" y="375" width="40" height="12" rx="2"/>
+    <rect x="610" y="375" width="40" height="12" rx="2"/>
+    
+    <rect x="160" y="395" width="40" height="12" rx="2"/>
+    <rect x="210" y="395" width="40" height="12" rx="2"/>
+    <rect x="260" y="395" width="40" height="12" rx="2"/>
+    <rect x="310" y="395" width="40" height="12" rx="2"/>
+    <rect x="360" y="395" width="40" height="12" rx="2"/>
+    <rect x="410" y="395" width="40" height="12" rx="2"/>
+    <rect x="460" y="395" width="40" height="12" rx="2"/>
+    <rect x="510" y="395" width="40" height="12" rx="2"/>
+    
+    <rect x="160" y="415" width="50" height="12" rx="2"/>
+    <rect x="215" y="415" width="40" height="12" rx="2"/>
+    <rect x="265" y="415" width="40" height="12" rx="2"/>
+    <rect x="315" y="415" width="40" height="12" rx="2"/>
+    <rect x="365" y="415" width="40" height="12" rx="2"/>
+    <rect x="415" y="415" width="40" height="12" rx="2"/>
+    <rect x="465" y="415" width="85" height="12" rx="2"/>
+    
+    <rect x="150" y="430" width="85" height="20" rx="2.5"/>
+    
+    <rect x="245" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="285" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="325" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="365" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="405" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="445" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="485" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="525" y="430" width="30" height="20" rx="2.5"/>
+    <rect x="245" y="430" width="30" height="20" rx="2.5"/>
+    
+    <rect x="570" y="430" width="85" height="20" rx="2.5"/>
+
+    
+    <!-- touche avant barre espace -->
+    <rect x="150" y="460" width="40" height="20" rx="3"/>
+    <rect x="200" y="460" width="40" height="20" rx="3"/>
+    <!-- touche après barre espace -->
+    <rect x="500" y="460" width="20" height="20" rx="3"/>
+    <rect x="530" y="460" width="30" height="20" rx="3"/>
+     <!-- touche directionnelle après barre espace -->
+    <rect x="570" y="470" width="25" height="10" rx="3"/>
+    <rect x="600" y="470" width="25" height="10" rx="3"/>
+    <rect x="630" y="470" width="25" height="10" rx="3"/>
+     <!-- touche directionnelle haute après barre espace -->
+    <rect x="600" y="457" width="25" height="10" rx="3"/>
+
+   
+
+    
+
+    <!-- Barre espace -->
+    <rect x="250" y="460" width="240" height="20" rx="3"/>
+  </g>
+  
+  <!-- Trackpad -->
+  <rect x="320" y="505" width="160" height="80" rx="8"  fill="url(#trackpadGradient)" stroke="#aaa" stroke-width="1"/>
+  
+
+</svg>
