@@ -20,9 +20,6 @@ const PaperCV = ({ position }) => {
                 position: 'absolute',
                 cursor: 'pointer',
                 ...position,
-                perspective: '1000px', // Ajoute de la perspective pour l'effet 3D
-                transform: 'rotateX(65deg) rotateZ(-9deg)',
-
 
             }}
         >
@@ -33,10 +30,10 @@ const PaperCV = ({ position }) => {
 
                 >
                     <Image
-                        src="/images/paper-cv.svg" // Remplace par le chemin de ton image de feuille
+                        src="/images/paper-cv.svg"
                         alt="Feuille de papier - CV"
-                        width={60} // Ajuste la taille selon ton design
-                        height={100} // Ajuste la taille selon ton design
+                        width={120}
+                        height={150}
                     />
                 </motion.div>
                 <Box
@@ -44,7 +41,7 @@ const PaperCV = ({ position }) => {
                     variants={labelVariants}
                     sx={{
                         position: 'absolute',
-                        bottom: '-25px', // Positionne le label sous l'image
+                        bottom: '-25px',
                         left: '50%',
                         transform: 'translateX(-50%)',
                         backgroundColor: 'rgba(0, 0, 0, 0.7)',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -11,13 +11,15 @@ import { motion } from 'framer-motion';
 
 const WallScene = ({ themeMode }) => {
 
+    const theme = useTheme();
+
 
     // Position de la fenêtre
     const windowPosition = {
         top: '2%',
-        right: '10%',
-        width: '355px',
-        height: '370px',
+        right: '8%',
+        width: '375px',
+        height: '375px',
     };
 
     // Définition des variantes pour l'animation du palmier
@@ -63,11 +65,9 @@ const WallScene = ({ themeMode }) => {
                 sx={{
                     position: 'absolute',
                     ...windowPosition,
-                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                    borderRadius: '12px',
                     overflow: 'hidden',
-                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                    backdropFilter: 'blur(10px)',
+                    backgroundColor: theme.palette.background.default,
+
                 }}
             >
 
@@ -82,18 +82,41 @@ const WallScene = ({ themeMode }) => {
                     }}
                 >
                     {/* Image de la vue extérieure positionnée en fond */}
-                    <Image
-                        src="/images/nature-2.png"
-                        alt="Vue extérieure"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        priority={true}
-                        style={{
+                    <Box
+                        sx={{
                             position: 'absolute',
                             zIndex: 0,
+                            top: '2%',
+                            width: '100%',
+                            height: '350px',
+                        }}
+                    >
+
+                        <Image
+                            src="/images/nature-2.png"
+                            alt="Vue extérieure"
+                            layout="fill"
+                            objectFit="cover"
+                            quality={100}
+                            priority={true}
+                        />
+
+
+                    </Box>
+                    {/* Bloc rouge au-dessus de l'image */}
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            zIndex: 1,
+                            top: '2%',
+                            width: '100%',
+                            height: '350px',
+                            backgroundColor: theme.palette.window.main,
+
                         }}
                     />
+
+
 
                     {/* Palmiers animés */}
                     <motion.div
@@ -102,17 +125,17 @@ const WallScene = ({ themeMode }) => {
                         style={{
                             position: 'absolute',
                             bottom: 0,
-                            left: '60%',
-                            width: '160px', // Ajustez la taille
-                            height: '200px',
-                            transformOrigin: 'bottom', // Point de rotation en bas
+                            left: '50%',
+                            width: '150px',
+                            height: '150px',
+                            transformOrigin: 'bottom',
                         }}
                     >
                         <Image
-                            src="/images/palm.png" // Chemin de l'image du palmier
+                            src="/images/palm.png"
                             alt="Palmier animé"
-                            width={150} // Ajuste la largeur
-                            height={250} // Ajuste la hauteur
+                            width={160}
+                            height={150}
                         />
                     </motion.div>
                     {/* Soleil animé */}
@@ -162,7 +185,7 @@ const WallScene = ({ themeMode }) => {
                     </motion.div>
                 </Box>
 
-                {/* Oiseaux animés sur le bord de la fenêtre */}
+
                 {/* Oiseau éveillé (pour le mode clair) */}
                 <motion.div
                     initial={{ opacity: 1 }}
@@ -170,7 +193,7 @@ const WallScene = ({ themeMode }) => {
                     transition={{ duration: 0.5 }}
                     style={{
                         position: 'absolute',
-                        bottom: '2%',
+                        bottom: '5%',
                         left: '10%',
                         zIndex: 2, // 
                     }}
@@ -179,7 +202,7 @@ const WallScene = ({ themeMode }) => {
                         variants={birdVariants}
                         animate="sway"
                         style={{
-                            transformOrigin: 'bottom', // L'oiseau pivote depuis son bas
+                            transformOrigin: 'bottom',
                         }}
                     >
                         <Image
@@ -199,7 +222,7 @@ const WallScene = ({ themeMode }) => {
                     transition={{ duration: 0.5 }}
                     style={{
                         position: 'absolute',
-                        bottom: '2%',
+                        bottom: '5%',
                         left: '10%',
                         zIndex: 2,
                     }}
@@ -221,18 +244,27 @@ const WallScene = ({ themeMode }) => {
 
                 </motion.div>
                 {/* Image de la fenêtre au-dessus de la vue extérieure */}
-                <Image
-                    src="/images/fenêtre.png"
-                    alt='Fenêtre ouverte'
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                    priority={true}
-                    style={{
+                <Box
+                    sx={{
                         position: 'absolute',
                         zIndex: 1,
+                        top: -9,
+                        width: '100%',
+                        height: '395px',
                     }}
-                />
+                >
+                    <Image
+                        src="/images/fenêtre-en-bois.png"
+                        alt='Fenêtre ouverte'
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        priority={true}
+
+                    />
+
+                </Box>
+
             </Box>
         </Box>
     );

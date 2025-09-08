@@ -14,8 +14,11 @@ const palette = {
             paper: "#FFFFFF",
         },
         wall: {
-            main: "#fef8e3",
+            main: "#34c595ff",
             ground: '#f5ebc8ff'
+        },
+        window: {
+            main: "#00000000"
         },
         text: {
             primary: "#1E1E1E",
@@ -30,12 +33,15 @@ const palette = {
             main: "#1A2E40", // bleu nuit
         },
         wall: {
-            main: "#2e3e5c",
-            ground: '#2b365b'
+            main: "#237459ff",
+            ground: '#857f6cff'
         },
         background: {
-            default: "#0D1117", // fond sombre (GitHub-like)
+            default: "#0D1117",
             paper: "#1C1F26",
+        },
+        window: {
+            main: "#3b363680"
         },
         text: {
             primary: "#EDEDED",

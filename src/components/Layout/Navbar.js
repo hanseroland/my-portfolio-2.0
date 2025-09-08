@@ -48,9 +48,6 @@ export default function Navbar({ themeMode, setThemeMode }) {
                         Hanse
                     </Link>
 
-                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-
-                    </Box>
 
                     <Box
                         sx={{
@@ -63,7 +60,7 @@ export default function Navbar({ themeMode, setThemeMode }) {
                             onClick={toggleTheme}
                             color="inherit"
                             sx={{
-                                backgroundColor: theme.palette.primary.main
+                                backgroundColor: theme.palette.background.main
                             }}
                         >
                             {themeMode === 'light' ? <Brightness4Icon /> : <Brightness7Icon sx={{ color: "#fff" }} />}

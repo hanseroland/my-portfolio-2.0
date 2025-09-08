@@ -3,6 +3,7 @@ import DeskScene from "@/components/DeskScene";
 import { Box, useTheme } from "@mui/material";
 import WallScene from "@/components/WallScene";
 import FurnitureScene from "@/components/FurnitureScene";
+import WallArtScene from "@/components/WallArtScene";
 
 
 
@@ -28,7 +29,6 @@ export default function Home({ themeMode }) {
             height: "100vh",
             position: 'relative',
             overflow: 'hidden',
-            // Effet de perspective pour créer l'illusion d'une salle
             background: `linear-gradient(180deg,
               ${theme.palette.wall?.main || '#fef8e3'} 0%,
               ${theme.palette.wall?.main || '#fef8e3'} 70%,
@@ -72,6 +72,7 @@ export default function Home({ themeMode }) {
           }}
         >
           <WallScene themeMode={themeMode} />
+          <WallArtScene />
           <FurnitureScene />
           <DeskScene />
         </Box>

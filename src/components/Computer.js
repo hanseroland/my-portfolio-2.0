@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import FloatingLabel from './FloatingLabel';
 import Image from 'next/image';
 
-const Computer = () => {
+const Computer = ({ onHoverStart, onHoverEnd }) => {
     const router = useRouter();
 
     const handleClick = () => {
@@ -15,7 +15,9 @@ const Computer = () => {
         <motion.div
             whileHover={{ scale: 1.05, cursor: 'pointer' }}
             whileTap={{ scale: 0.95 }}
-            onClick={handleClick}
+            //onClick={handleClick}
+            onHoverStart={onHoverStart}
+            onHoverEnd={onHoverEnd}
             style={{
                 position: 'relative',
                 width: '130px',
