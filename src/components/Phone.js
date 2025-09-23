@@ -3,16 +3,16 @@ import { Box } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import FloatingLabel from './FloatingLabel';
 
 const Phone = ({ position }) => {
-    // Les variantes de Framer Motion pour l'animation du label
-    const labelVariants = {
-        hidden: { opacity: 0, y: 10 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    };
+
 
     return (
         <Box
+            component={motion.div}
+            whileHover="visible"
+            initial="hidden"
             sx={{
                 position: 'absolute',
                 cursor: 'pointer',
@@ -24,36 +24,18 @@ const Phone = ({ position }) => {
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 400 }}
-
                 >
+                    <FloatingLabel text="Me contacter" />
                     <Image
-                        src="/images/phone_19675.png" // Remplace par le chemin de ton image de téléphone
+                        src="/images/phone_19675.png"
                         alt="Téléphone - Contact"
-                        width={70} // Ajuste la taille
-                        height={70} // Ajuste la taille
+                        width={70}
+                        height={70}
                     />
+
                 </motion.div>
             </Link>
-            <Box
-                component={motion.div}
-                whileHover="visible"
-                initial="hidden"
-                variants={labelVariants}
-                sx={{
-                    position: 'absolute',
-                    bottom: '-25px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                    color: 'white',
-                    padding: '4px 8px',
-                    borderRadius: '4px',
-                    fontSize: '12px',
-                    whiteSpace: 'nowrap',
-                }}
-            >
-                Contactez-moi
-            </Box>
+
         </Box>
     );
 };

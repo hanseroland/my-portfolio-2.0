@@ -5,20 +5,10 @@ import Computer from './Computer';
 import PaperCV from './PaperCV';
 import Phone from './Phone';
 import Coffee from './Coffee';
-import { AnimatePresence } from 'framer-motion';
-import ProjectScreen from './ProjectScreen';
 
 const DeskScene = () => {
 
-    const [isComputerHovered, setIsComputerHovered] = useState(false);
 
-    const handleHoverStart = () => {
-        setIsComputerHovered(true);
-    };
-
-    const handleHoverEnd = () => {
-        setIsComputerHovered(false);
-    };
 
     return (
         <Box
@@ -42,32 +32,8 @@ const DeskScene = () => {
 
             />
 
-
             {/* Ordinateur */}
-            <div
-                style={{
-                    position: 'absolute',
-                    top: '16%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)'
-                }}
-                onMouseEnter={handleHoverStart}
-                onMouseLeave={handleHoverEnd}
-            >
-                <Computer />
-            </div>
-
-            {/* AnimatePresence pour les icônes contextuelles */}
-            <AnimatePresence>
-                {isComputerHovered && (
-                    <>
-                        <ProjectScreen />
-                        <PaperCV />
-                    </>
-                )}
-            </AnimatePresence>
-
-
+            <Computer position={{ top: '1%', left: '35%' }} />
             {/* Feuille (CV) */}
             <PaperCV position={{ top: '10%', right: '10%' }} />
 

@@ -103,7 +103,7 @@ const WallScene = ({ themeMode }) => {
 
 
                     </Box>
-                    {/* Bloc rouge au-dessus de l'image */}
+
                     <Box
                         sx={{
                             position: 'absolute',

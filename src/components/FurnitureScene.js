@@ -1,21 +1,20 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-const FurnitureScene = () => {
+const FurnitureScene = ({ themeMode }) => {
     return (
         <Box
             sx={{
                 position: 'absolute',
                 bottom: "20%",
-                left: '5%', // Positionné à gauche de l'écran
+                left: '5%',
                 width: '300px',
                 height: '400px',
                 zIndex: 1,
                 display: 'flex',
                 alignItems: 'flex-end',
-                //transform: 'perspective(1000px) rotateY(15deg) scale(0.8)',
-                //transformOrigin: 'bottom left',
             }}
 
         >
@@ -61,7 +60,6 @@ const FurnitureScene = () => {
             <Box
                 sx={{
                     position: 'absolute',
-
                     bottom: 28,
                     left: 0,
                     width: '100px',
@@ -74,6 +72,31 @@ const FurnitureScene = () => {
                     width={240}
                     height={400}
                 />
+            </Box>
+            {/* Lumière de la lampe */}
+            <Box
+                component={motion.div}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{
+                    opacity: themeMode === 'dark' ? 1 : 0,
+                    y: themeMode === 'dark' ? 0 : 5,
+                }}
+                transition={{ duration: 0.8 }}
+                sx={{
+                    position: 'absolute',
+                    top: -50,
+                    left: 0,
+                    width: '100px',
+                    zIndex: 1,
+                }}
+            >
+                <Image
+                    src="/images/lumiere.webp"
+                    alt="Lumière de la lampe"
+                    width={240}
+                    height={200}
+                />
+
             </Box>
         </Box>
     );

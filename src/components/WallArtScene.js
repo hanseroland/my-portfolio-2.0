@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Box } from '@mui/material';
 import Image from 'next/image';
+import FloatingLabel from './FloatingLabel';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const MotionBox = motion(Box);
+
 
 const WallArtScene = () => {
     const [time, setTime] = useState(new Date());
@@ -23,15 +29,41 @@ const WallArtScene = () => {
 
     return (
         <Box
+            component={motion.div}
+            whileHover="visible"
+            initial="hidden"
             sx={{
                 position: 'absolute',
                 top: '15%',
-                right: '40%', // Ajuste la position pour un équilibre visuel
-                zIndex: 2, // S'assure qu'il est devant le mur
+                right: '40%',
+                zIndex: 2,
                 display: 'flex',
                 gap: '20px',
             }}
         >
+
+            <Link href="#" passHref>
+                <MotionBox
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 400 }}
+                    sx={{
+                        width: '160px',
+                        height: '250px',
+                        position: 'relative',
+                        backgroundColor: '#ccc',
+
+                    }}
+                >
+                    <Image
+                        src="/images/hrp.png"
+                        alt="Photo personnelle"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                    <FloatingLabel text="A propos de moi" />
+                </MotionBox>
+            </Link>
+
             {/* Horloge animée */}
             <Box
                 sx={{
@@ -41,7 +73,7 @@ const WallArtScene = () => {
                 }}
             >
                 <Image
-                    src="/images/horloge-svg.svg" // Remplace par le chemin de ton fond d'horloge
+                    src="/images/horloge-svg.svg"
                     alt="Fond d'horloge"
                     layout="fill"
                 />
@@ -89,21 +121,7 @@ const WallArtScene = () => {
                 />
             </Box>
 
-            {/* Photo à droite */}
-            <Box
-                sx={{
-                    width: '1clea00px',
-                    height: '150px',
-                    position: 'relative',
-                }}
-            >
-                <Image
-                    src="/images/photo.svg" // Remplace par ta photo
-                    alt="Photo personnelle"
-                    layout="fill"
-                    objectFit="cover"
-                />
-            </Box>
+
         </Box>
     );
 };

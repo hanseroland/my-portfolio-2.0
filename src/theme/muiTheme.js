@@ -23,6 +23,7 @@ const palette = {
         text: {
             primary: "#1E1E1E",
             secondary: "#555555",
+            third: "#184425ff",
         },
     },
     dark: {
@@ -46,6 +47,7 @@ const palette = {
         text: {
             primary: "#EDEDED",
             secondary: "#A1A1A1",
+            third: "#fff",
         },
     },
 };
