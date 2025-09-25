@@ -7,39 +7,44 @@ const experiences = [
         icon: '/images/intense-logo.png',
         title: 'Freelance | Développeur Full Stack',
         company: 'Nana Head Spa',
-        location: 'France',
+        location: '- France',
         dates: 'Avr 2025 - Sept 2025',
     },
     {
         icon: '/images/taager-logo.png',
         title: 'Freelance | Intégrateur Web et Référenceur SEO',
         company: 'Shine Skin Bar',
-        location: 'Dakar',
+        location: '- Dakar',
         dates: 'Mars 2025 - Août 2025',
     },
     {
         icon: '/images/taager-logo.png',
         title: 'Freelance | Développeur Full Stack',
         company: 'Eureka',
-        location: 'Dakar',
+        location: '- Dakar',
         dates: 'Janvier 2025 - Aujourd\'hui',
     },
     {
         icon: '/images/taager-logo.png',
         title: 'Reférenceur SEO',
         company: 'Futur Digital',
-        location: 'Dakar',
+        location: '- Dakar',
         dates: 'Nov 2023 - Aujourd\'hui',
     },
     {
         icon: '/images/taager-logo.png',
         title: 'Tech Lead & Développeur Full Stack',
         company: 'Cabinet Carrée',
-        location: 'Dakar',
+        location: '- Dakar',
         dates: 'Dec 2021 - Août 2023',
     },
-
-    // ... ajoute d'autres expériences ici
+    {
+        icon: '/images/taager-logo.png',
+        title: 'Stage | Développeur Java',
+        company: 'Union Gabonaise de Banque (UGB)',
+        location: '- Libreville',
+        dates: 'Avril 2018 - Spet 2018',
+    },
 ];
 
 const ExperienceList = () => {

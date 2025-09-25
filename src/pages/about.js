@@ -18,6 +18,7 @@ const About = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                pb: { xs: 6, md: 4 }
             }}
         >
 

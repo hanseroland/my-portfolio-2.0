@@ -46,7 +46,22 @@ const ProfileText = () => {
                 >
                     LinkedIn
                 </Link>
-
+                <Link
+                    href="https://github.com/hanseroland"
+                    target="_blank"
+                    underline="hover"
+                    sx={{
+                        color: theme.palette.primary.main,
+                        fontWeight: 600,
+                        '&:hover': {
+                            color: theme.palette.secondary.main,
+                            transform: 'translateY(-2px)',
+                            transition: 'all 0.3s ease',
+                        },
+                    }}
+                >
+                    Github
+                </Link>
                 <Link
                     href="/path/to/CV.pdf"
                     target="_blank"

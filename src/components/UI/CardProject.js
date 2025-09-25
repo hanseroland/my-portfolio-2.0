@@ -47,6 +47,40 @@ const cardData = [
         result: 'Statut : en cours d’expérimentation avec les premiers utilisateurs.',
         stack: ['React.js', 'Node.js', 'Express', 'MongoDB'],
     },
+    {
+        id: 4,
+        img: 'https://picsum.photos/800/450?random=4',
+        tag: 'MERN / React Native / Expo',
+        title: '📌 Application Web et Mobile – Plateforme de Gestion de don de sang',
+        contexte: 'Projet de fin d\'étude Développement d’une solution de gestion de don de Sang.',
+        description: `Développement d’une plateforme mobile et web complète dédiée à la gestion du don de sang. 
+        L'objectif principal est de connecter les donneurs avec les centres de transfusion sanguine et les hôpitaux, 
+        en rendant le processus de don et de réception du sang plus efficace, transparent et réactif.`,
+        fonctionnalités: [
+            {
+                fonctionnalite: "Gestion des Utilisateurs et des Rôles",
+                details: "Une architecture robuste gère plusieurs types d'utilisateurs (donneurs, administrateurs, hôpitaux, centres de transfusion), chacun ayant des permissions spécifiques."
+            },
+            {
+                fonctionnalite: "Inventaire en Temps Réel",
+                details: "Le stock de sang est suivi avec précision, enregistrant les entrées et les sorties par groupe sanguin et quantité."
+            },
+            {
+                fonctionnalite: "Système de Requêtes et de Dons",
+                details: "Les hôpitaux peuvent émettre des demandes de sang qui sont ensuite gérées par les centres. Les dons sont suivis de la collecte jusqu'à leur mise en stock, avec des statuts et des dates d'expiration."
+            },
+            {
+                fonctionnalite: "Géolocalisation et Rendez-vous",
+                details: "Les donneurs peuvent facilement trouver le centre de don le plus proche grâce à la géolocalisation et prendre des rendez-vous pour organiser leur don, réduisant ainsi les temps d'attente."
+            },
+            {
+                fonctionnalite: "Alertes et Annonces",
+                details: "En cas d'urgence, des alertes ciblées sont envoyées aux donneurs d'un groupe sanguin spécifique dans une zone géographique donnée."
+            }
+        ],
+        result: 'Statut : Prix d\'Excellence SUP MTI 2025.',
+        stack: ['React.js', 'Node.js', 'Express', 'MongoDB', 'React Native', 'Expo'],
+    },
 ];
 
 
