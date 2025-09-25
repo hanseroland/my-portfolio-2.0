@@ -38,7 +38,9 @@ export default function Navbar({ themeMode, setThemeMode }) {
             sx={{
                 boxShadow: 0,
                 bgcolor: 'transparent',
-                backgroundImage: 'none',
+                backgroundColor: 'transparent',
+                backdropFilter: 'none !important',
+                WebkitBackdropFilter: 'none !important',
                 mt: 'calc(var(--template-frame-height, 0px) + 8px)',
             }}
         >

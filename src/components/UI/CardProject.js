@@ -9,6 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
+import { Chip } from '@mui/material';
 
 const cardData = [
     {
@@ -49,34 +50,34 @@ const cardData = [
 ];
 
 
-const SyledCard = styled(Card)(({ theme }) => ({
+// --- Styled components ---
+const StyledCard = styled(Card)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
-    padding: 0,
     height: '100%',
-    backgroundColor: theme.palette.background.default,
-    boxShadow: '0 10px 6px rgba(0, 0, 0, 0.1)',
-    transition: 'box-shadow 0.3s ease',
+    borderRadius: theme.shape.borderRadius * 1.5,
+    background: theme.palette.mode === 'light'
+        ? 'rgba(255,255,255,0.6)'
+        : 'rgba(28,31,38,0.6)',
+    backdropFilter: 'blur(18px)',
+    boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
+    transition: 'all 0.3s ease',
     '&:hover': {
-        cursor: 'pointer',
+        transform: 'translateY(-6px)',
+        boxShadow: `0 12px 35px ${theme.palette.primary.main}40`,
     },
     '&:focus-visible': {
-        outline: '3px solid',
-        outlineColor: 'hsla(210, 98%, 48%, 0.5)',
-        outlineOffset: '2px',
+        outline: `2px solid ${theme.palette.primary.main}`,
+        outlineOffset: '3px',
     },
 }));
 
-const SyledCardContent = styled(CardContent)({
+const StyledCardContent = styled(CardContent)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
-    gap: 4,
-    padding: 16,
+    gap: theme.spacing(1.5),
     flexGrow: 1,
-    '&:last-child': {
-        paddingBottom: 16,
-    },
-});
+}));
 
 const StyledTypography = styled(Typography)({
     display: '-webkit-box',
@@ -173,36 +174,44 @@ export default function CardProject() {
                 {
                     cardData.map((card, index) => (
                         <Grid key={card.id} size={{ xs: 12, md: 6 }}>
-                            <SyledCard
-                                variant="outlined"
-                                onFocus={() => handleFocus(0)}
-                                onBlur={handleBlur}
-                                tabIndex={0}
-                                className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
-                            >
+                            <StyledCard tabIndex={0}>
                                 <CardMedia
                                     component="img"
-                                    alt="green iguana"
+                                    alt={card.title}
                                     image={card.img}
                                     sx={{
                                         aspectRatio: '16 / 9',
                                         borderBottom: '1px solid',
-                                        borderColor: 'divider',
+                                        borderColor: theme.palette.divider,
+                                        borderTopLeftRadius: theme.shape.borderRadius * 1.5,
+                                        borderTopRightRadius: theme.shape.borderRadius * 1.5,
                                     }}
                                 />
-                                <SyledCardContent>
-                                    <Typography gutterBottom variant="caption" component="div">
-                                        {card.tag}
-                                    </Typography>
-                                    <Typography gutterBottom variant="h6" component="div">
+                                <StyledCardContent>
+                                    <Chip
+                                        label={card.tag}
+                                        size="small"
+                                        sx={{
+                                            alignSelf: 'flex-start',
+                                            borderRadius: '1rem',
+                                            backgroundColor: theme.palette.primary.main + '20',
+                                            color: theme.palette.primary.main,
+                                            fontWeight: 500,
+                                        }}
+                                    />
+                                    <Typography
+                                        gutterBottom
+                                        variant="h6"
+                                        component="div"
+                                        sx={{ color: theme.palette.primary.main, fontWeight: 600 }}
+                                    >
                                         {card.title}
                                     </Typography>
-                                    <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+                                    <StyledTypography variant="body2" color="text.secondary">
                                         {card.description}
                                     </StyledTypography>
-                                </SyledCardContent>
-
-                            </SyledCard>
+                                </StyledCardContent>
+                            </StyledCard>
                         </Grid>
                     ))
 
