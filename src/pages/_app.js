@@ -12,6 +12,10 @@ import "@fontsource/poppins/700.css";
 
 // Styles globaux
 import "@/styles/globals.css";
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import WebLayout from "@/components/Layout/WebLayout";
