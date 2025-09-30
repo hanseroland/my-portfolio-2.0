@@ -57,12 +57,9 @@ export const cardData = [
         ],
         role: "Conception et développement complet du backend et frontend (site web + Tableau de bord), modélisation MongoDB, sécurisation JWT, intégration emailing et Cloudinary, organisation et architecture modulaire.",
         challengesAndSolutions: [
-            "Messagerie temps réel avec Socket.IO et JWT : persistance des messages et mise à jour automatique du lastMessage.",
-            "Fidélisation interactive : conception d’un modèle MongoDB pour suivre les niveaux clients.",
-            "Gestion multi-origines CORS dynamique via .env pour dev et prod.",
-            "SEO et contenu dynamique : slugs automatiques pour articles, bannières dynamiques par page.",
-            "Sécurité utilisateurs : mots de passe non renvoyés, tokens reset password expirants.",
-            "Emailing professionnel : templates HTML brandés intégrés avec SMTP Gandi."
+            "Au départ, j’utilisais le localStorage pour stocker le token d’authentification, mais cette méthode posait des problèmes de sécurité. J’ai alors décidé de passer par les cookies HttpOnly envoyés depuis le backend. Tout fonctionnait bien sur PC, mais lors de la démonstration finale à la cliente, la connexion échouait sur iOS.",
+            "Après investigation, j’ai découvert que la sécurité renforcée de Safari bloque l’envoi de cookies si le frontend et le backend sont sur des noms de domaine différents. Dans mon cas, le frontend et l’API avaient des URLs séparées.",
+            "Solution : création d’un sous-domaine CNAME pointant vers l’API hébergée sur Render, j’ai configuré les cookies avec l’attribut SameSite=None et Secure=true, ce qui permet leur envoi sur des domaines différents à condition que la connexion soit sécurisée (HTTPS). J’ai également veillé à ce que les deux serveurs utilisent HTTPS.",
         ],
         impact: "Gestion automatisée des rendez-vous et notifications, expérience client fluide et personnalisée, valorisation de la marque via articles, galerie et bannières, backend robuste et évolutif prêt pour la production.",
         link: "(Live Demo / GitHub à ajouter)"
