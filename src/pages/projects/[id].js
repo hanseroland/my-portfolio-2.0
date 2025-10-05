@@ -26,7 +26,7 @@ const ProjectDetails = () => {
     return (
 
         <Container maxWidth="lg" sx={{ pt: 5, pb: 10 }}>
-            <ProjectHeader title={project.title} tag={project.tag} />
+            <ProjectHeader title={project.title} tag={project.tag} links={project.links} />
             <ProjectGallery images={project.images} />
             <ProjectInfo project={project} />
         </Container>

@@ -29,7 +29,7 @@ export const cardData = [
                 alt: 'Capture d\'écran Site Web Nana Head Spa'
             },
         ],
-        tag: 'Freelance / Fullstack MERN / Next.js',
+        tag: 'Freelance / Fullstack : MongoDB - Express - Node.js - Next.js',
         context: "Nana Head Spa est un institut de bien-être qui souhaitait digitaliser l’ensemble de ses services : prise de rendez-vous en ligne, suivi client personnalisé, messagerie instantanée, blog et galerie photo. L’objectif était d’améliorer l’expérience client, d’automatiser la gestion interne et de renforcer l’image de marque de l’institut.",
         objective: "Centraliser la gestion des rendez-vous, automatiser l’envoi des emails, offrir une messagerie sécurisée, gérer la fidélité client, et permettre la publication facile de contenu attractif.",
         mainFeatures: [
@@ -62,7 +62,10 @@ export const cardData = [
             "Solution : création d’un sous-domaine CNAME pointant vers l’API hébergée sur Render, j’ai configuré les cookies avec l’attribut SameSite=None et Secure=true, ce qui permet leur envoi sur des domaines différents à condition que la connexion soit sécurisée (HTTPS). J’ai également veillé à ce que les deux serveurs utilisent HTTPS.",
         ],
         impact: "Gestion automatisée des rendez-vous et notifications, expérience client fluide et personnalisée, valorisation de la marque via articles, galerie et bannières, backend robuste et évolutif prêt pour la production.",
-        link: "(Live Demo / GitHub à ajouter)"
+        links: {
+            demo: "https://nanaheadspa.com",
+            code: ""
+        }
     },
     {
         id: 2,
@@ -106,7 +109,10 @@ export const cardData = [
             "Manque de visibilité locale → création fiche Google My Business + intégration SEO Search Console."
         ],
         impact: "Site modernisé, rapide et responsive. Résultat concret : passage de 1 clic/mois à 533 clics pour 7 830 impressions en 6 mois.",
-        link: "https://shineskinbar.com/"
+        links: {
+            demo: "https://shineskinbar.com/",
+            code: ""
+        }
     },
 
     {

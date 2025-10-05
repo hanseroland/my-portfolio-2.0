@@ -8,7 +8,7 @@ import Container from '@mui/material/Container';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Link from 'next/link';
-import { useTheme } from '@mui/material';
+import { Typography, useTheme } from '@mui/material';
 
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -46,9 +46,22 @@ export default function Navbar({ themeMode, setThemeMode }) {
         >
             <Container maxWidth="fluid">
                 <StyledToolbar variant="dense" disableGutters>
-                    <Link href="/" passHref>
-                        Hanse
-                    </Link>
+                    <Box sx={{
+                        display: { xs: 'none', md: 'flex' },
+                        gap: 1,
+                        alignItems: 'flex-start',
+                        flexDirection: 'column',
+                    }}>
+                        <Link href="/" passHref>
+                            <Typography variant="h6" component="h1" sx={{ fontWeight: 'bold', mb: 1 }}>
+                                Bonjour
+                            </Typography>
+                        </Link>
+                        <Typography variant="body1" sx={{ fontWeight: 'bold', mb: 1 }}>
+                            Fullstack Web Developer | MERN | Next.js
+                        </Typography>
+                    </Box>
+
 
 
                     <Box
