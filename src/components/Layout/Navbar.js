@@ -54,12 +54,9 @@ export default function Navbar({ themeMode, setThemeMode }) {
                     }}>
                         <Link href="/" passHref>
                             <Typography variant="h6" component="h1" sx={{ fontWeight: 'bold', mb: 1 }}>
-                                Bonjour
+                                Accueil
                             </Typography>
                         </Link>
-                        <Typography variant="body1" sx={{ fontWeight: 'bold', mb: 1 }}>
-                            Fullstack Web Developer | MERN | Next.js
-                        </Typography>
                     </Box>
 
 
