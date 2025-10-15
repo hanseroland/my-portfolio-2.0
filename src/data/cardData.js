@@ -53,19 +53,21 @@ export const cardData = [
         impact: "Gestion automatisée des rendez-vous et notifications, expérience client fluide et personnalisée, valorisation de la marque via articles, galerie et bannières, backend robuste et évolutif prêt pour la production.",
         links: {
             demo: "https://nanaheadspa.com",
-            code: ""
+            frontend: "https://github.com/hanseroland/nana-head-spa-web-site",
+            backend: "https://github.com/hanseroland/nana-head-spa-backend"
         }
     },
     {
         "id": 2,
-        "img": "/images/hero-landing.png",
+        "img": "/images/elyka-1.png",
         "title": "📌 💳 NFC Digital Business Cards – Plateforme MERN complète",
         "images": [
-            { "src": "/images/landing-hero.png", "alt": "Page d’accueil - partage de cartes NFC" },
-            { "src": "/images/admin-dashboard.png", "alt": "Tableau de bord admin - gestion utilisateurs et cartes NFC" },
-            { "src": "/images/contact-detail.png", "alt": "Page publique de contact accessible via puce NFC" }
+            { "src": "/images/elyka-mob.png", "alt": "Page d’accueil mobile - partage de cartes NFC" },
+            { "src": "/images/elyka-1.png", "alt": "Accueil site web cartes NFC" },
+            { "src": "/images/elyka-3.png", "alt": "Page Accueil web cartes NFC" },
+            { "src": "/images/elyka-dah.png", "alt": "Tableau de bord carte NFC" }
         ],
-        "tag": "Freelance / MERN Stack / NFC / Dashboard Admin",
+        "tag": "Freelance / Fullstack : MongoDB - Express - React - Node.js (MERN)",
         "context": "Projet freelance réalisé pour la startup ELYKA. L’objectif était de concevoir une plateforme complète permettant la création, la gestion et le partage de cartes de visite numériques connectées à des puces NFC. Le système devait offrir une expérience fluide et sécurisée, sans nécessiter d’application mobile.",
         "objective": "Permettre à chaque professionnel de générer sa carte de visite numérique unique, accessible instantanément via une puce NFC ou un QR code, tout en donnant aux administrateurs un tableau de bord pour superviser les utilisateurs, cartes et statistiques d’usage.",
         "mainFeatures": [
@@ -97,18 +99,24 @@ export const cardData = [
             "📱 Partage sans installation d’application : génération automatique d’URL publique accessible via NFC ou QR code."
         ],
         "impact": "La solution permet aux utilisateurs de partager leurs coordonnées en un simple geste via NFC ou QR code, renforçant l’image professionnelle et moderne des clients ELYKA. L’administration bénéficie d’un suivi clair de l’activité (créations, connexions, utilisateurs récents). L’architecture MERN modulaire offre une base évolutive prête à accueillir de nouvelles fonctionnalités comme les paiements Stripe ou des analytics avancées.",
-        "link": "https://github.com/hanseroland/nfc"
+        "links": {
+            demo: "",
+            frontend: "",
+            backend: "",
+            code: "https://github.com/hanseroland/nfc"
+        }
     },
     {
         "id": 3,
-        "img": "/images/cv_icon_129114.png",
+        "img": "/images/resume-ai-1.png",
         "title": "📌 🧠 Resume AI — Générateur et éditeur de CV intelligent assisté par IA",
         "images": [
-            { "src": "/images/pexels-tubarones-3754438.jpg", "alt": "Aperçu interface principale Resume AI" },
-            { "src": "/images/Photo-2.webp", "alt": "Capture d’écran de l’éditeur et de l’aperçu du CV" },
-            { "src": "/images/curriculumresume_portofolio.png", "alt": "Illustration d’un modèle de CV généré" }
+            { "src": "/images/resume-ai-mob.png", "alt": "Aperçu interface mobile Resume AI" },
+            { "src": "/images/resume-ai-1.png", "alt": "Capture d’écran de l’éditeur et de l’aperçu du CV" },
+            { "src": "/images/resume-ai-2.png", "alt": "Capture d’écran de l’éditeur et de l’aperçu du CV" },
+            { "src": "/images/resume-cv.png", "alt": "Tous les CV générés" }
         ],
-        "tag": "MERN · OpenAI · Full-Stack",
+        "tag": "Full-Stack : MongoDB - Express - React - Node.js (MERN) / OpenAI ·",
         "context": "Resume AI est une application full-stack (React + Node.js + MongoDB) qui permet aux utilisateurs de créer, éditer et personnaliser leurs CV grâce à l’assistance d’une intelligence artificielle. Elle combine génération automatique de texte, aperçu en temps réel et gestion complète du profil utilisateur dans une interface moderne et intuitive.",
         "objective": "Simplifier la création de CV professionnels grâce à l’IA, en générant automatiquement les sections clés (profil, expériences, compétences) tout en offrant un éditeur visuel en temps réel et des modèles prêts à l’emploi.",
         "mainFeatures": [
@@ -140,7 +148,12 @@ export const cardData = [
             "Offrir une expérience d’édition fluide et intuitive des expériences professionnelles → intégration d’un éditeur WYSIWYG avec boutons de génération IA injectant automatiquement le contenu généré.",
         ],
         "impact": "Resume AI accélère la création de CV en combinant génération de contenu IA et modèles pré-formatés. L’application aide les utilisateurs à produire des CV professionnels en quelques minutes, améliore la qualité rédactionnelle et réduit le stress de la rédaction manuelle. Projet prêt pour la production et extensible avec de nouveaux templates et export PDF.",
-        "link": "https://github.com/hanseroland/resume-ai"
+        "links": {
+            demo: "",
+            frontend: "https://github.com/hanseroland/resume-ai-frontend",
+            backend: "https://github.com/hanseroland/resume-ai",
+            code: ""
+        }
     },
     {
         id: 4,
@@ -168,7 +181,7 @@ export const cardData = [
             "React, Redux, Axios",
             "Expo React Native, React-Native-Maps, Notifications Expo",
         ],
-        role: "Développeur Fullstack principal – conception de l’architecture complète du projet :",
+        role: "Développeur Fullstack principal – conception de l’architecture complète du projet",
         responsibilities: [
             "• Développement et déploiement de l’API REST Node.js/Express.",
             "• Création de l’interface web pour hôpitaux, centres et administrateurs (React + MUI).",
@@ -186,9 +199,9 @@ export const cardData = [
         impact: "Plateforme complète prête pour un déploiement à grande échelle : elle connecte efficacement les donneurs et les centres, réduit les délais de réponse en cas d’urgence et apporte une meilleure visibilité aux structures médicales locales. Le projet démontre une expertise fullstack avec un fort impact social.",
         links: {
             demo: "",
-            backend: "",
-            frontend: "",
-            mobile: ""
+            frontend: "https://github.com/hanseroland/bloodBankWeb",
+            backend: "https://github.com/hanseroland/bloodBankApi",
+            mobile: "https://github.com/hanseroland/mobile-blood"
         }
     },
     {
