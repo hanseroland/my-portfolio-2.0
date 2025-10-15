@@ -120,6 +120,23 @@ const WallArtScene = () => {
                     }}
                 />
             </Box>
+            <MotionBox
+                component={motion.div}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 400 }}
+                sx={{
+                    width: '220px',
+                    height: '270px',
+                    position: 'relative',
+                }}
+            >
+                <Image
+                    src="/images/nnhrp.png"
+                    alt="Photo personnelle"
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </MotionBox>
 
 
         </Box>

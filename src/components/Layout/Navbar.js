@@ -53,7 +53,7 @@ export default function Navbar({ themeMode, setThemeMode }) {
                         flexDirection: 'column',
                     }}>
                         <Link href="/" passHref>
-                            <Typography variant="h6" component="h1" sx={{ fontWeight: 'bold', mb: 1 }}>
+                            <Typography color='text.primary' variant="h6" component="h1">
                                 Accueil
                             </Typography>
                         </Link>
