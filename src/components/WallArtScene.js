@@ -27,19 +27,45 @@ const WallArtScene = () => {
     const minuteRotation = minutes * 6;
     const secondRotation = seconds * 6;
 
+    // Définition des dimensions et du positionnement responsifs pour le conteneur principal
+    const mainContainerStyles = {
+        position: 'absolute',
+        // Positionnement (ajusté pour être plus centré sur mobile, puis décalé sur desktop)
+        top: { xs: '5%', md: '15%' },
+        right: { xs: '50%', md: '40%' },
+        transform: { xs: 'translateX(50%)', md: 'none' }, // Centre le groupe sur mobile
+
+        zIndex: 2,
+        display: 'flex',
+        // Disposition en colonne sur mobile, en ligne sur desktop
+        flexDirection: { xs: 'column', md: 'row' },
+        gap: { xs: '20px', md: '20px' }, // Espacement vertical sur mobile
+    };
+
+    // Définition des tailles des cadres (Photo de profil)
+    const photoFrameDimensions = {
+        width: { xs: '120px', sm: '140px', md: '160px' },
+        height: { xs: '180px', sm: '220px', md: '250px' },
+    };
+
+    // Définition des tailles de l'Horloge
+    const clockDimensions = {
+        width: { xs: '100px', sm: '120px', md: '150px' },
+        height: { xs: '100px', sm: '120px', md: '150px' },
+    };
+
+    // Définition des tailles du Cadre Décoratif
+    const decoFrameDimensions = {
+        width: { xs: '150px', sm: '180px', md: '220px' },
+        height: { xs: '180px', sm: '230px', md: '270px' },
+    };
+
     return (
         <Box
             component={motion.div}
             whileHover="visible"
             initial="hidden"
-            sx={{
-                position: 'absolute',
-                top: '15%',
-                right: '40%',
-                zIndex: 2,
-                display: 'flex',
-                gap: '20px',
-            }}
+            sx={mainContainerStyles}
         >
 
             <Link href="/about" passHref>
@@ -47,8 +73,7 @@ const WallArtScene = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 400 }}
                     sx={{
-                        width: '160px',
-                        height: '250px',
+                        ...photoFrameDimensions,
                         position: 'relative',
                         backgroundColor: '#ccc',
 
@@ -67,8 +92,7 @@ const WallArtScene = () => {
             {/* Horloge animée */}
             <Box
                 sx={{
-                    width: '150px',
-                    height: '150px',
+                    ...clockDimensions,
                     position: 'relative',
                 }}
             >
@@ -125,8 +149,7 @@ const WallArtScene = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 400 }}
                 sx={{
-                    width: '220px',
-                    height: '270px',
+                    ...decoFrameDimensions,
                     position: 'relative',
                 }}
             >

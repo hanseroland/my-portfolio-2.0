@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { alpha, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,6 +9,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Link from 'next/link';
 import { Typography, useTheme } from '@mui/material';
+import { Coffee } from '@mui/icons-material';
 
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -47,14 +48,14 @@ export default function Navbar({ themeMode, setThemeMode }) {
             <Container maxWidth="fluid">
                 <StyledToolbar variant="dense" disableGutters>
                     <Box sx={{
-                        display: { xs: 'none', md: 'flex' },
+                        display: { xs: 'flex', md: 'flex' },
                         gap: 1,
                         alignItems: 'flex-start',
                         flexDirection: 'column',
                     }}>
                         <Link href="/" passHref>
                             <Typography color='text.primary' variant="h6" component="h1">
-                                Accueil
+                                <Coffee fontSize="large" sx={{ verticalAlign: 'middle', mr: 1 }} />
                             </Typography>
                         </Link>
                     </Box>
@@ -63,19 +64,22 @@ export default function Navbar({ themeMode, setThemeMode }) {
 
                     <Box
                         sx={{
-                            display: { xs: 'none', md: 'flex' },
+                            display: { xs: 'flex', md: 'flex' },
                             gap: 1,
                             alignItems: 'center',
                         }}
                     >
                         <IconButton
                             onClick={toggleTheme}
-                            color="inherit"
-                            sx={{
-                                backgroundColor: theme.palette.background.main
-                            }}
+                            color={theme.palette.text.primary}
+
                         >
-                            {themeMode === 'light' ? <Brightness4Icon /> : <Brightness7Icon sx={{ color: "#fff" }} />}
+                            {
+                                themeMode === 'light' ?
+                                    <Brightness4Icon color={theme.palette.text.primary} />
+                                    :
+                                    <Brightness7Icon color={theme.palette.text.primary} />
+                            }
                         </IconButton>
                     </Box>
 

@@ -8,14 +8,25 @@ import Coffee from './Coffee';
 
 const DeskScene = () => {
 
-
+    const DESK_RATIO = '40%';
 
     return (
         <Box
             sx={{
-                width: '30%',
-                height: '400px',
+                width: {
+                    xs: '90%',
+                    sm: '70%',
+                    md: '55%',
+                    lg: '30%'
+                },
+                height: 0,
+                paddingTop: '20%',
+
                 position: 'relative',
+                mx: 'auto', // Centrage horizontal (marge auto)
+                mt: { xs: 5, md: 5 }, // Marge supérieure responsive
+
+
                 overflow: 'hidden',
                 display: 'flex',
                 justifyContent: 'center',
@@ -33,7 +44,7 @@ const DeskScene = () => {
             />
 
             {/* Ordinateur */}
-            <Computer position={{ top: '1%', left: '35%' }} />
+            <Computer position={{ top: '0%', left: '35%' }} />
             {/* Feuille (CV) */}
             <PaperCV position={{ top: '10%', right: '10%' }} />
 

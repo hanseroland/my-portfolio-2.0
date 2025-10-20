@@ -15,12 +15,35 @@ const WallScene = ({ themeMode }) => {
 
 
     // Position de la fenêtre
+    /* const windowPosition = {
+         top: '2%',
+         right: '8%',
+         width: '375px',
+         height: '375px',
+     };*/
+
+    // Position et dimensions de la fenêtre rendues responsives
     const windowPosition = {
-        top: '2%',
-        right: '8%',
-        width: '375px',
-        height: '375px',
+        // Positionnement général (coin supérieur droit)
+        top: { xs: '5%', md: '2%' },
+        right: { xs: '5%', md: '8%' },
+
+        // Dimensions de la fenêtre : réduites sur mobile, augmentées sur desktop
+        width: {
+            xs: '250px',
+            sm: '300px',
+            md: '350px',
+            lg: '375px'
+        },
+        height: {
+            xs: '250px',
+            sm: '300px',
+            md: '350px',
+            lg: '375px'
+        },
     };
+
+
 
     // Définition des variantes pour l'animation du palmier
     const palmVariants = {
@@ -86,9 +109,9 @@ const WallScene = ({ themeMode }) => {
                         sx={{
                             position: 'absolute',
                             zIndex: 0,
-                            top: '2%',
+                            top: '5%',
                             width: '100%',
-                            height: '350px',
+                            height: '90%',
                         }}
                     >
 
@@ -112,7 +135,7 @@ const WallScene = ({ themeMode }) => {
                             width: '100%',
                             height: '350px',
                             backgroundColor: theme.palette.window.main,
-
+                            opacity: 0.2
                         }}
                     />
 
@@ -134,6 +157,7 @@ const WallScene = ({ themeMode }) => {
                         <Image
                             src="/images/palm.png"
                             alt="Palmier animé"
+                            layout="responsive"
                             width={160}
                             height={150}
                         />

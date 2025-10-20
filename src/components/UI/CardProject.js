@@ -20,6 +20,7 @@ import Link from 'next/link';
 const StyledCard = styled(Card)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
+    width: { xs: '200px', sm: '100%', lg: '100%' },
     height: '100%',
     borderRadius: theme.shape.borderRadius * 1.5,
     background: theme.palette.mode === 'light'
@@ -28,6 +29,13 @@ const StyledCard = styled(Card)(({ theme }) => ({
     backdropFilter: 'blur(18px)',
     boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
     transition: 'all 0.3s ease',
+
+
+    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+        width: '370px',
+    },
+
     '&:hover': {
         transform: 'translateY(-6px)',
         boxShadow: `0 12px 35px ${theme.palette.primary.main}40`,
@@ -119,29 +127,26 @@ export default function CardProject() {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 4
+                justifyContent: 'center'
             }}
         >
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: { xs: 'column-reverse', md: 'row' },
-                    width: '100%',
-                    justifyContent: 'space-between',
-                    alignItems: { xs: 'start', md: 'center' },
-                    gap: 4,
-                    overflow: 'auto',
-                }}
-            >
 
-
-            </Box>
-            <Grid container spacing={3} columns={12}>
+            <Grid container spacing={2}>
                 {
                     cardData.map((card, index) => (
-                        <Grid key={card.id} size={{ xs: 12, md: 6 }}>
-                            <Link href={`/projects/${card.id}`} passHref style={{ textDecoration: 'none' }}>
-                                <StyledCard tabIndex={0}>
+                        <Grid
+                            key={card.id}
+                            size={{ xs: 12, sm: 6, md: 6 }}
+                        >
+                            <Link
+                                href={`/projects/${card.id}`}
+                                passHref
+                                style={{
+                                    textDecoration: 'none',
+                                    //width: { xs: '100px', sm: '100%', lg: '100%' },
+                                }}
+                            >
+                                <StyledCard>
                                     <CardMedia
                                         component="img"
                                         alt={card.title}

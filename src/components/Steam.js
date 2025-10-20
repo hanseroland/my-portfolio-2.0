@@ -33,8 +33,8 @@ const Steam = () => {
                         position: 'absolute',
                         bottom: '20%',
                         left: `${50 + (Math.random() - 0.5) * 40}%`,
-                        width: '8px',
-                        height: '30px',
+                        width: '20px',
+                        height: '20px',
                         backgroundColor: 'rgba(255, 255, 255, 0.5)',
                         borderRadius: '50%',
                     }}

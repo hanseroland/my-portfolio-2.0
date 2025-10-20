@@ -43,7 +43,7 @@ function Index() {
                             textAlign: 'center',
                             fontWeight: 700,
                             color: theme.palette.text.primary,
-                            fontSize: { xs: '1.8rem', md: '3rem' },
+                            fontSize: { xs: '1.5rem', md: '3rem' },
                             letterSpacing: '-0.5px',
                         }}
                         gutterBottom

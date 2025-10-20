@@ -22,6 +22,8 @@ const Computer = ({ position }) => {
                 position: 'absolute',
                 cursor: 'pointer',
                 ...position,
+                width: { xs: '25%', sm: '28%' },
+                height: 'auto',
             }}
         >
             <Link href="/projects" passHref>
@@ -32,6 +34,7 @@ const Computer = ({ position }) => {
                     <Image
                         src="/images/mac.svg"
                         alt="Ordinateur interactif"
+                        layout="responsive"
                         width={150}
                         height={120}
 

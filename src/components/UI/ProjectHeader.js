@@ -33,40 +33,65 @@ const ProjectHeader = ({ title, tag, links }) => (
                 mt: 3,
                 display: 'flex',
                 justifyContent: 'center',
-                gap: 2,
-                flexDirection: { xs: 'column', sm: 'row' }
+                gap: 1,
+                flexDirection: { xs: 'row', sm: 'row' }
             }}
             >
                 {
                     links?.demo && (
                         <Link href={links.demo} passHref target="_blank" rel="noopener noreferrer">
-                            <motion.div whileHover={{ scale: 1.1 }}>
-                                <Button color="primary" endIcon={<OpenInBrowser />} sx={{ width: '200px', textTransform: 'none' }}>
-                                    Démo live
-                                </Button>
-                            </motion.div>
+                            <Button
+                                variant="text"
+                                color="primary"
+                                endIcon={<OpenInBrowser />}
+                                sx={{
+                                    width: { xs: '100px', sm: '200px' },
+                                    textTransform: 'none',
+                                    fontSize: { xs: 10, sm: 16 }
+                                }}
+                            >
+                                Live
+                            </Button>
                         </Link>
                     )
                 }
                 {
                     links?.frontend && (
                         <Link href={links?.frontend} passHref target="_blank" rel="noopener noreferrer">
-                            <motion.div whileHover={{ scale: 1.1 }}>
-                                <Button color="primary" endIcon={<GitHub />} sx={{ width: '200px', textTransform: 'none' }}>
-                                    frontend
-                                </Button>
-                            </motion.div>
+
+                            <Button
+                                variant="text"
+                                color="primary"
+                                endIcon={<GitHub />}
+                                sx={{
+                                    width: { xs: '100px', sm: '200px' },
+                                    textTransform: 'none',
+                                    fontSize: { xs: 10, sm: 16 }
+                                }}
+                            >
+                                frontend
+                            </Button>
+
                         </Link>
                     )
                 }
                 {
                     links?.backend && (
                         <Link href={links?.backend} passHref target="_blank" rel="noopener noreferrer">
-                            <motion.div whileHover={{ scale: 1.1 }}>
-                                <Button color="primary" endIcon={<GitHub />} sx={{ width: '200px', textTransform: 'none' }}>
-                                    backend
-                                </Button>
-                            </motion.div>
+
+                            <Button
+                                variant="text"
+                                color="primary"
+                                endIcon={<GitHub />}
+                                sx={{
+                                    width: { xs: '100px', sm: '200px' },
+                                    textTransform: 'none',
+                                    fontSize: { xs: 10, sm: 16 }
+                                }}
+                            >
+                                backend
+                            </Button>
+
                         </Link>
                     )
                 }
@@ -74,11 +99,20 @@ const ProjectHeader = ({ title, tag, links }) => (
                 {
                     links?.mobile && (
                         <Link href={links?.mobile} passHref target="_blank" rel="noopener noreferrer">
-                            <motion.div whileHover={{ scale: 1.1 }}>
-                                <Button color="primary" endIcon={<GitHub />} sx={{ width: '200px', textTransform: 'none' }}>
-                                    app mobile
-                                </Button>
-                            </motion.div>
+
+                            <Button
+                                variant="text"
+                                color="primary"
+                                endIcon={<GitHub />}
+                                sx={{
+                                    width: { xs: '100px', sm: '200px' },
+                                    textTransform: 'none',
+                                    fontSize: { xs: 10, sm: 16 }
+                                }}
+                            >
+                                app mobile
+                            </Button>
+
                         </Link>
                     )
                 }
@@ -87,7 +121,13 @@ const ProjectHeader = ({ title, tag, links }) => (
                     links?.code && (
                         <Link href={links?.code} passHref target="_blank" rel="noopener noreferrer">
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Button color="primary" endIcon={<GitHub />} sx={{ width: '200px', textTransform: 'none' }}>
+                                <Button color="primary" endIcon={<GitHub />}
+                                    sx={{
+                                        width: { xs: '100px', sm: '200px' },
+                                        textTransform: 'none',
+                                        fontSize: { xs: 10, sm: 16 }
+                                    }}
+                                >
                                     github
                                 </Button>
                             </motion.div>
