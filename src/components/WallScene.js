@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 
 
 
+const MotionBox = motion(Box);
 
 
 const WallScene = ({ themeMode }) => {
@@ -24,11 +25,9 @@ const WallScene = ({ themeMode }) => {
 
     // Position et dimensions de la fenêtre rendues responsives
     const windowPosition = {
-        // Positionnement général (coin supérieur droit)
         top: { xs: '5%', md: '2%' },
         right: { xs: '5%', md: '8%' },
 
-        // Dimensions de la fenêtre : réduites sur mobile, augmentées sur desktop
         width: {
             xs: '250px',
             sm: '300px',
@@ -81,6 +80,7 @@ const WallScene = ({ themeMode }) => {
                 top: 0,
                 left: 0,
                 overflow: 'hidden',
+                display: { xs: 'none', sm: 'none', md: 'block' }
             }}
         >
             {/* Conteneur de la fenêtre et de la vue extérieure */}
@@ -102,6 +102,7 @@ const WallScene = ({ themeMode }) => {
                         left: 0,
                         width: '100%',
                         height: '100%',
+                        display: { xs: 'none', md: 'block' }
                     }}
                 >
                     {/* Image de la vue extérieure positionnée en fond */}
@@ -112,6 +113,7 @@ const WallScene = ({ themeMode }) => {
                             top: '5%',
                             width: '100%',
                             height: '90%',
+                            display: { xs: 'none', md: 'block' }
                         }}
                     >
 
@@ -122,6 +124,7 @@ const WallScene = ({ themeMode }) => {
                             objectFit="cover"
                             quality={100}
                             priority={true}
+
                         />
 
 
@@ -135,23 +138,25 @@ const WallScene = ({ themeMode }) => {
                             width: '100%',
                             height: '350px',
                             backgroundColor: theme.palette.window.main,
-                            opacity: 0.2
+                            opacity: 0.2,
+                            display: { xs: 'none', md: 'block' }
                         }}
                     />
 
 
 
                     {/* Palmiers animés */}
-                    <motion.div
+                    <MotionBox
                         variants={palmVariants}
                         animate="sway"
-                        style={{
+                        sx={{
                             position: 'absolute',
                             bottom: 0,
                             left: '50%',
                             width: '150px',
                             height: '150px',
                             transformOrigin: 'bottom',
+                            display: { xs: 'none', md: 'block' }
                         }}
                     >
                         <Image
@@ -161,43 +166,45 @@ const WallScene = ({ themeMode }) => {
                             width={160}
                             height={150}
                         />
-                    </motion.div>
+                    </MotionBox>
                     {/* Soleil animé */}
-                    <motion.div
+                    <MotionBox
                         initial={{ opacity: 1, y: 0 }}
                         animate={{
                             opacity: themeMode === 'light' ? 1 : 0,
                             y: themeMode === 'light' ? 0 : 200, // Se déplace vers le bas
                         }}
                         transition={{ duration: 0.8 }}
-                        style={{
+                        sx={{
                             position: 'absolute',
                             top: '10%',
                             left: '50%',
                             transform: 'translateX(-50%)',
+                            display: { xs: 'none', md: 'block' }
                         }}
                     >
                         <Image
-                            src="/images/sun.png" // Remplace par le chemin de ton image du soleil
+                            src="/images/sun.png"
                             alt="Soleil"
                             width={100}
                             height={100}
                         />
-                    </motion.div>
+                    </MotionBox>
 
                     {/* Lune animée */}
-                    <motion.div
+                    <MotionBox
                         initial={{ opacity: 0, y: 200 }} // Commence en bas et invisible
                         animate={{
                             opacity: themeMode === 'dark' ? 1 : 0,
                             y: themeMode === 'dark' ? 0 : 200, // Se déplace vers le haut
                         }}
                         transition={{ duration: 0.8 }}
-                        style={{
+                        sx={{
                             position: 'absolute',
                             top: '10%',
                             left: '50%',
                             transform: 'translateX(-50%)',
+                            display: { xs: 'none', md: 'block' }
                         }}
                     >
                         <Image
@@ -206,26 +213,27 @@ const WallScene = ({ themeMode }) => {
                             width={80}
                             height={80}
                         />
-                    </motion.div>
+                    </MotionBox>
                 </Box>
 
 
                 {/* Oiseau éveillé (pour le mode clair) */}
-                <motion.div
+                <MotionBox
                     initial={{ opacity: 1 }}
                     animate={{ opacity: themeMode === 'light' ? 1 : 0 }}
                     transition={{ duration: 0.5 }}
-                    style={{
+                    sx={{
                         position: 'absolute',
                         bottom: '5%',
                         left: '10%',
-                        zIndex: 2, // 
+                        zIndex: 2,
+                        display: { xs: 'none', md: 'block' }
                     }}
                 >
-                    <motion.div
+                    <MotionBox
                         variants={birdVariants}
                         animate="sway"
-                        style={{
+                        xs={{
                             transformOrigin: 'bottom',
                         }}
                     >
@@ -235,27 +243,28 @@ const WallScene = ({ themeMode }) => {
                             width={50}
                             height={50}
                         />
-                    </motion.div>
+                    </MotionBox>
 
-                </motion.div>
+                </MotionBox>
 
                 {/* Oiseau endormi (pour le mode sombre) */}
-                <motion.div
+                <MotionBox
                     initial={{ opacity: 0 }}
                     animate={{ opacity: themeMode === 'dark' ? 1 : 0 }}
                     transition={{ duration: 0.5 }}
-                    style={{
+                    sx={{
                         position: 'absolute',
                         bottom: '5%',
                         left: '10%',
                         zIndex: 2,
+                        display: { xs: 'none', md: 'block' }
                     }}
                 >
-                    <motion.div
+                    <MotionBox
                         variants={birdVariants}
                         animate="sway"
-                        style={{
-                            transformOrigin: 'bottom', // L'oiseau pivote depuis son bas
+                        sx={{
+                            transformOrigin: 'bottom',
                         }}
                     >
                         <Image
@@ -264,9 +273,9 @@ const WallScene = ({ themeMode }) => {
                             width={50}
                             height={50}
                         />
-                    </motion.div>
+                    </MotionBox>
 
-                </motion.div>
+                </MotionBox>
                 {/* Image de la fenêtre au-dessus de la vue extérieure */}
                 <Box
                     sx={{
@@ -275,6 +284,7 @@ const WallScene = ({ themeMode }) => {
                         top: -9,
                         width: '100%',
                         height: '395px',
+                        display: { xs: 'none', md: 'block' }
                     }}
                 >
                     <Image

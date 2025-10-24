@@ -24,23 +24,31 @@ export default function Home({ themeMode }) {
           sx={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "flex-end",
+            alignItems: { xs: "center", md: "flex-end" },
             paddingBottom: '2vh',
             height: "100vh",
             position: 'relative',
             overflow: 'hidden',
-            background: `linear-gradient(180deg,
+            background: {
+              xs: `linear-gradient(180deg,
+              ${theme.palette.wall?.main || '#fef8e3'} 0%,
+              ${theme.palette.wall?.main || '#fef8e3'} 60%,
+              ${theme.palette.wall?.ground || '#f5ebc8'} 60%,
+              ${theme.palette.wall?.ground || '#f5ebc8'} 100%)`,
+              boxShadow: 'inset 0 0 50px rgba(0,0,0,0.1)',
+              md: `linear-gradient(180deg,
               ${theme.palette.wall?.main || '#fef8e3'} 0%,
               ${theme.palette.wall?.main || '#fef8e3'} 70%,
               ${theme.palette.wall?.ground || '#f5ebc8'} 60%,
               ${theme.palette.wall?.ground || '#f5ebc8'} 100%)`,
-            boxShadow: 'inset 0 0 50px rgba(0,0,0,0.1)',
+              boxShadow: 'inset 0 0 50px rgba(0,0,0,0.1)',
 
-            // Effet de coin en perspective (haut)
+            },
+
             '&::before': {
               content: '""',
               position: 'absolute',
-              top: 0,
+              top: 100,
               left: 0,
               right: 0,
               bottom: 0,
@@ -52,7 +60,6 @@ export default function Home({ themeMode }) {
               pointerEvents: 'none',
               zIndex: 1,
             },
-
             // Effet de sol en perspective (bas)
             '&::after': {
               content: '""',

@@ -14,23 +14,23 @@ const DeskScene = () => {
         <Box
             sx={{
                 width: {
-                    xs: '90%',
+                    xs: '100%',
                     sm: '70%',
                     md: '55%',
                     lg: '30%'
                 },
-                height: 0,
-                paddingTop: '20%',
-
+                height: { xs: '33%', md: 0 },
+                paddingTop: { xs: '40%', md: '20%' },
                 position: 'relative',
-                mx: 'auto', // Centrage horizontal (marge auto)
-                mt: { xs: 5, md: 5 }, // Marge supérieure responsive
+                mx: 'auto',
+                mt: { xs: '60%', md: 5 },
 
 
                 overflow: 'hidden',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'flex-end',
+                zIndex: 1
             }}
         >
             <Image
@@ -44,15 +44,15 @@ const DeskScene = () => {
             />
 
             {/* Ordinateur */}
-            <Computer position={{ top: '0%', left: '35%' }} />
+            <Computer position={{ top: { xs: '3%', md: '0%' }, left: '35%' }} />
             {/* Feuille (CV) */}
-            <PaperCV position={{ top: '10%', right: '10%' }} />
+            <PaperCV position={{ top: { xs: '5%', md: '10%' }, right: '10%' }} />
 
             {/* Téléphone (Contact) */}
-            <Phone position={{ top: '16%', left: '10%' }} />
+            <Phone position={{ top: { xs: '10%', md: '16%' }, left: '10%' }} />
 
             {/* Café */}
-            <Coffee position={{ top: '10%', right: '25%' }} />
+            <Coffee position={{ top: { xs: '5%', md: '10%' }, right: '25%' }} />
         </Box>
     );
 };

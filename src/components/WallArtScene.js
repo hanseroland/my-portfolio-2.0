@@ -31,14 +31,14 @@ const WallArtScene = () => {
     const mainContainerStyles = {
         position: 'absolute',
         // Positionnement (ajusté pour être plus centré sur mobile, puis décalé sur desktop)
-        top: { xs: '5%', md: '15%' },
+        top: { xs: '15%', md: '15%' },
         right: { xs: '50%', md: '40%' },
         transform: { xs: 'translateX(50%)', md: 'none' }, // Centre le groupe sur mobile
 
         zIndex: 2,
         display: 'flex',
         // Disposition en colonne sur mobile, en ligne sur desktop
-        flexDirection: { xs: 'column', md: 'row' },
+        flexDirection: { xs: 'row', md: 'row' },
         gap: { xs: '20px', md: '20px' }, // Espacement vertical sur mobile
     };
 
@@ -94,6 +94,7 @@ const WallArtScene = () => {
                 sx={{
                     ...clockDimensions,
                     position: 'relative',
+                    mt: { xs: '60px', md: 0 },
                 }}
             >
                 <Image
@@ -144,6 +145,7 @@ const WallArtScene = () => {
                     }}
                 />
             </Box>
+            {/* Poste*/}
             <MotionBox
                 component={motion.div}
                 whileHover={{ scale: 1.05 }}
@@ -151,6 +153,7 @@ const WallArtScene = () => {
                 sx={{
                     ...decoFrameDimensions,
                     position: 'relative',
+                    display: { xs: 'none', md: 'block' }
                 }}
             >
                 <Image
@@ -160,8 +163,6 @@ const WallArtScene = () => {
                     objectFit="cover"
                 />
             </MotionBox>
-
-
         </Box>
     );
 };

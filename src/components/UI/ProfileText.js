@@ -24,7 +24,7 @@ const ProfileText = () => {
                     textAlign: 'justify',
                 }}
             >
-                Développeur Fullstack passionné avec plus de 10 ans d’expérience en MERN et Next.js. Je conçois des applications web et mobiles modernes,
+                Développeur Fullstack passionné avec plus de 3 ans d’expérience développement web Fullstack. Je conçois des applications web et mobiles modernes,
                 performantes et esthétiques, avec un accent sur l’expérience utilisateur. Toujours à la recherche de solutions innovantes,
                 je combine expertise technique et sens du design pour créer des produits qui se démarquent.
             </Typography>

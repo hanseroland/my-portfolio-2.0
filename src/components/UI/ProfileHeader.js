@@ -47,7 +47,7 @@ const ProfileHeader = () => {
                 component="h1"
                 sx={{
                     fontWeight: 700,
-                    fontSize: { xs: '1rem', md: '1.5rem' },
+                    fontSize: { xs: '0.9rem', md: '1.5rem' },
                     color: theme.palette.text.primary,
                     lineHeight: 1,
                     letterSpacing: '-0.5px',

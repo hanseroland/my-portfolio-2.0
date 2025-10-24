@@ -13,7 +13,7 @@ const FurnitureScene = ({ themeMode }) => {
                 width: '300px',
                 height: '400px',
                 zIndex: 1,
-                display: 'flex',
+                display: { xs: 'none', md: 'flex' },
                 alignItems: 'flex-end',
             }}
 
