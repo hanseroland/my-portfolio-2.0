@@ -23,9 +23,12 @@ export default function Home({ themeMode }) {
   return (
     <>
       <Head>
-        <title>Mon Portfolio</title>
-        <meta name="description" content="Portfolio interactif avec bureau animé" />
+        <title>Hanse Roland Parfait - Développeur Web FullStack</title>
+        <meta name="description" content=" Développeur Fullstack passionné avec plus de 3 ans d’expérience développement web Fullstack. Je conçois des applications web et mobiles modernes,
+                performantes et esthétiques" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="googlebot" content="notranslate" />
+        <meta name="google" content="notranslate" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>

@@ -12,19 +12,19 @@ const socialLinks = [
     {
         name: 'GitHub',
         icon: GitHubIcon,
-        url: 'VOTRE_LIEN_GITHUB',
+        url: 'https://github.com/hanseroland',
         tooltip: 'Voir mon code sur GitHub'
     },
     {
         name: 'LinkedIn',
         icon: LinkedInIcon,
-        url: 'VOTRE_LIEN_LINKEDIN',
+        url: 'https://www.linkedin.com/in/hanse-r-p-nguema-ntougou-16a907220/',
         tooltip: 'Me contacter sur LinkedIn'
     },
     {
         name: 'CV',
         icon: InsertDriveFileIcon,
-        url: 'VOTRE_LIEN_CV',
+        url: 'https://drive.google.com/file/d/1ErZE8__O1e5dJtLLfvwEj8ivP5x_KckZ/view?usp=drive_link',
         tooltip: 'Télécharger mon CV'
     },
 ];
