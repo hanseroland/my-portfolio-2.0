@@ -4,12 +4,21 @@ import { Box, useTheme } from "@mui/material";
 import WallScene from "@/components/WallScene";
 import FurnitureScene from "@/components/FurnitureScene";
 import WallArtScene from "@/components/WallArtScene";
+import { useState } from "react";
+import ComputerScreenOverlay from "@/components/UI/ComputerScreenOverlay";
+import StackWallArt from "@/components/UI/StackWallArt";
 
 
 
 export default function Home({ themeMode }) {
 
   const theme = useTheme();
+
+  // État centralisé pour contrôler l'affichage de l'Overlay
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  const handleOpenOverlay = () => setIsOverlayOpen(true);
+  const handleCloseOverlay = () => setIsOverlayOpen(false);
 
   return (
     <>
@@ -80,9 +89,26 @@ export default function Home({ themeMode }) {
         >
           <WallScene themeMode={themeMode} />
           <WallArtScene />
+          <StackWallArt
+            position={{
+
+              top: '5%',
+              left: '15%',
+              width: '15%',
+              height: '40%'
+            }}
+          />
           <FurnitureScene themeMode={themeMode} />
-          <DeskScene />
+          <DeskScene
+            onComputerHover={handleOpenOverlay}
+            onComputerLeave={handleCloseOverlay}
+          />
         </Box>
+
+        <ComputerScreenOverlay
+          isVisible={isOverlayOpen}
+          onClose={handleCloseOverlay}
+        />
       </div>
     </>
   );

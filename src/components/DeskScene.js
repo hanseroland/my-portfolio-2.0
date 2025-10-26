@@ -6,7 +6,7 @@ import PaperCV from './PaperCV';
 import Phone from './Phone';
 import Coffee from './Coffee';
 
-const DeskScene = () => {
+const DeskScene = ({ onComputerHover, onComputerLeave }) => {
 
     const DESK_RATIO = '40%';
 
@@ -16,10 +16,10 @@ const DeskScene = () => {
                 width: {
                     xs: '100%',
                     sm: '70%',
-                    md: '55%',
-                    lg: '30%'
+                    md: '70%',
+                    lg: '33%'
                 },
-                height: { xs: '33%', md: 0 },
+                height: { xs: '33%', sm: '20%', md: '40%', lg: 0 },
                 paddingTop: { xs: '40%', md: '20%' },
                 position: 'relative',
                 mx: 'auto',
@@ -44,15 +44,19 @@ const DeskScene = () => {
             />
 
             {/* Ordinateur */}
-            <Computer position={{ top: { xs: '3%', md: '0%' }, left: '35%' }} />
+            <Computer
+                position={{ top: { xs: '3%', md: '0%' }, left: '35%' }}
+                onHover={onComputerHover}
+                onLeave={onComputerLeave}
+            />
             {/* Feuille (CV) */}
-            <PaperCV position={{ top: { xs: '5%', md: '10%' }, right: '10%' }} />
+            <PaperCV position={{ top: { xs: '13%', md: '10%' }, right: { xs: '15%', md: '10%' } }} />
 
             {/* Téléphone (Contact) */}
-            <Phone position={{ top: { xs: '10%', md: '16%' }, left: '10%' }} />
+            <Phone position={{ top: { xs: '13%', md: '15%' }, left: '10%' }} />
 
             {/* Café */}
-            <Coffee position={{ top: { xs: '5%', md: '10%' }, right: '25%' }} />
+            <Coffee position={{ top: { xs: '13%', md: '10%' }, right: { xs: '30%', md: '25%' } }} />
         </Box>
     );
 };

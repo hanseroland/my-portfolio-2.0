@@ -63,7 +63,7 @@ const ProfileText = () => {
                     Github
                 </Link>
                 <Link
-                    href="/path/to/CV.pdf"
+                    href="https://drive.google.com/file/d/1ErZE8__O1e5dJtLLfvwEj8ivP5x_KckZ/view?usp=drive_link"
                     target="_blank"
                     underline="hover"
                     sx={{

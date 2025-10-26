@@ -80,7 +80,7 @@ const WallScene = ({ themeMode }) => {
                 top: 0,
                 left: 0,
                 overflow: 'hidden',
-                display: { xs: 'none', sm: 'none', md: 'block' }
+                display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' }
             }}
         >
             {/* Conteneur de la fenêtre et de la vue extérieure */}

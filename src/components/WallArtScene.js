@@ -4,6 +4,7 @@ import Image from 'next/image';
 import FloatingLabel from './FloatingLabel';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Person } from '@mui/icons-material';
 
 const MotionBox = motion(Box);
 
@@ -27,34 +28,29 @@ const WallArtScene = () => {
     const minuteRotation = minutes * 6;
     const secondRotation = seconds * 6;
 
-    // Définition des dimensions et du positionnement responsifs pour le conteneur principal
     const mainContainerStyles = {
         position: 'absolute',
-        // Positionnement (ajusté pour être plus centré sur mobile, puis décalé sur desktop)
         top: { xs: '15%', md: '15%' },
-        right: { xs: '50%', md: '40%' },
-        transform: { xs: 'translateX(50%)', md: 'none' }, // Centre le groupe sur mobile
-
+        right: { xs: '50%', md: '20%', lg: '40%' },
+        transform: { xs: 'translateX(50%)', md: 'none' },
         zIndex: 2,
         display: 'flex',
-        // Disposition en colonne sur mobile, en ligne sur desktop
+        justifyContent: 'center',
         flexDirection: { xs: 'row', md: 'row' },
-        gap: { xs: '20px', md: '20px' }, // Espacement vertical sur mobile
+        gap: { xs: '20px', md: '20px' },
+        //backgroundColor: 'red'
     };
 
-    // Définition des tailles des cadres (Photo de profil)
     const photoFrameDimensions = {
-        width: { xs: '120px', sm: '140px', md: '160px' },
-        height: { xs: '180px', sm: '220px', md: '250px' },
+        width: { xs: '120px', sm: '140px', md: '160px', lg: '160px' },
+        height: { xs: '180px', sm: '220px', md: '250px', lg: '250px' },
     };
 
-    // Définition des tailles de l'Horloge
     const clockDimensions = {
         width: { xs: '100px', sm: '120px', md: '150px' },
         height: { xs: '100px', sm: '120px', md: '150px' },
     };
 
-    // Définition des tailles du Cadre Décoratif
     const decoFrameDimensions = {
         width: { xs: '150px', sm: '180px', md: '220px' },
         height: { xs: '180px', sm: '230px', md: '270px' },
@@ -64,7 +60,7 @@ const WallArtScene = () => {
         <Box
             component={motion.div}
             whileHover="visible"
-            initial="hidden"
+            initial="visible"
             sx={mainContainerStyles}
         >
 
@@ -75,7 +71,7 @@ const WallArtScene = () => {
                     sx={{
                         ...photoFrameDimensions,
                         position: 'relative',
-                        backgroundColor: '#ccc',
+                        //backgroundColor: '#ccc',
 
                     }}
                 >
@@ -85,7 +81,7 @@ const WallArtScene = () => {
                         layout="fill"
                         objectFit="cover"
                     />
-                    <FloatingLabel text="A propos de moi" />
+                    <FloatingLabel icon={<Person />} text="A propos" />
                 </MotionBox>
             </Link>
 
@@ -153,7 +149,7 @@ const WallArtScene = () => {
                 sx={{
                     ...decoFrameDimensions,
                     position: 'relative',
-                    display: { xs: 'none', md: 'block' }
+                    display: { xs: 'none', md: 'none' }
                 }}
             >
                 <Image

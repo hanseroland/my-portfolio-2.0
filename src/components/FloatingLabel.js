@@ -1,8 +1,10 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Chip, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 
-const FloatingLabel = ({ text }) => {
+const FloatingLabel = ({ text, icon }) => {
+
+    const theme = useTheme();
 
     const labelVariants = {
         hidden: { opacity: 0, y: 10 },
@@ -16,26 +18,33 @@ const FloatingLabel = ({ text }) => {
             variants={labelVariants}
             style={{
                 position: 'absolute',
-                bottom: '-26px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                bottom: '-30px',
+                left: '6%',
                 width: "max-content",
 
 
             }}
         >
-            <Typography
-                align='center'
-                variant="caption"
+            <Chip
+                icon={icon}
+                label={text}
+                variant="filled"
+                size="small"
                 sx={{
-                    padding: 1,
-                    color: 'white',
-                    fontWeight: 'bold'
+                    backgroundColor: theme.palette.background.paper,
+                    fontSize: { xs: '0.7rem', md: '0.85rem' },
+                    display: 'flex',
+                    alignItems: 'center',
+                    backdropFilter: theme.components.MuiPaper.styleOverrides.root.backdropFilter,
+                    color: theme.palette.text.primary,
+
+
+                    '& .MuiSvgIcon-root': {
+                        mr: 0.5,
+                        fontSize: { xs: '1rem', md: '1.1rem' }
+                    }
                 }}
-            >
-                {text}
-            </Typography>
+            />
         </motion.div>
     );
 };

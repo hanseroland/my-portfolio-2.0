@@ -16,6 +16,8 @@ const Coffee = ({ position }) => {
                 cursor: 'pointer',
                 ...position,
                 perspective: '1000px',
+                width: { xs: '8%', sm: '8%', md: '12%', lg: '10%' },
+                height: 'auto',
             }}
         >
             <Steam />
@@ -24,10 +26,11 @@ const Coffee = ({ position }) => {
                 transition={{ type: 'spring', stiffness: 400 }}
             >
                 <Image
-                    src="/images/cafe.svg" // Remplace par le chemin de ton image de téléphone
+                    src="/images/cafe.svg"
                     alt="Café"
-                    width={70} // Ajuste la taille
-                    height={70} // Ajuste la taille
+                    layout="responsive"
+                    width={70}
+                    height={70}
                 />
             </motion.div>
             {/*<Box

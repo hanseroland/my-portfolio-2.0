@@ -8,8 +8,8 @@ const FurnitureScene = ({ themeMode }) => {
         <Box
             sx={{
                 position: 'absolute',
-                bottom: "20%",
-                left: '5%',
+                bottom: { md: '23%', lg: '20%' },
+                left: { md: '-35%', lg: '5%' },
                 width: '300px',
                 height: '400px',
                 zIndex: 1,

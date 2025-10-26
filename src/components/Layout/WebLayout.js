@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Box, useTheme } from "@mui/material";
+import SocialFloatingButtons from "../UI/SocialFloatingButtons";
 
 
 const WebLayout = ({ children, themeMode, setThemeMode }) => {
@@ -17,6 +18,7 @@ const WebLayout = ({ children, themeMode, setThemeMode }) => {
         >
             <Navbar themeMode={themeMode} setThemeMode={setThemeMode} />
             <main>{children}</main>
+            <SocialFloatingButtons />
         </Box>
     );
 };
