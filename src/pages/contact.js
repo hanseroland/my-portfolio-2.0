@@ -10,7 +10,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 
 
 
-const contact = () => {
+const Contact = () => {
 
 
     const theme = useTheme();
@@ -178,4 +178,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default Contact
