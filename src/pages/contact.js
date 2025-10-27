@@ -10,7 +10,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 
 
 
-function contact() {
+const contact = () => {
 
 
     const theme = useTheme();
