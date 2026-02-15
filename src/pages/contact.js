@@ -141,7 +141,7 @@ const Contact = () => {
                             return (
                                 <motion.div key={index} variants={itemVariants}>
                                     <Button
-                                        fullWidth
+
                                         variant={link.main ? 'contained' : 'outlined'}
                                         color={link.color}
                                         startIcon={<LinkIcon />}
@@ -153,7 +153,7 @@ const Contact = () => {
                                             py: 2,
                                             // Grosse police pour les boutons principaux
                                             fontSize: link.main ? '1rem' : '0.9rem',
-                                            fontWeight: 700,
+                                            fontWeight: 600,
                                             // Effet de Glassmorphism subtil sur les boutons secondaires
                                             backgroundColor: link.main ? undefined : 'rgba(255, 255, 255, 0.05)',
                                             '&:hover': {

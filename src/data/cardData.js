@@ -116,7 +116,7 @@ export const cardData = [
             { "src": "/images/resume-ai-2.png", "alt": "Capture d’écran de l’éditeur et de l’aperçu du CV" },
             { "src": "/images/resume-cv.png", "alt": "Tous les CV générés" }
         ],
-        "tag": "Full-Stack : MongoDB - Express - React - Node.js (MERN) / OpenAI ·",
+        "tag": "Full-Stack : MongoDB - Express - React - Node.js / OpenAI / GEMINI",
         "context": "Resume AI est une application full-stack (React + Node.js + MongoDB) qui permet aux utilisateurs de créer, éditer et personnaliser leurs CV grâce à l’assistance d’une intelligence artificielle. Elle combine génération automatique de texte, aperçu en temps réel et gestion complète du profil utilisateur dans une interface moderne et intuitive.",
         "objective": "Simplifier la création de CV professionnels grâce à l’IA, en générant automatiquement les sections clés (profil, expériences, compétences) tout en offrant un éditeur visuel en temps réel et des modèles prêts à l’emploi.",
         "mainFeatures": [
@@ -146,10 +146,12 @@ export const cardData = [
             "Transformation des réponses IA en contenu JSON structuré et valide → utilisation du function calling OpenAI et parsing robuste côté backend avec gestion d’erreurs et fallback automatique.",
             "Maintien de la synchronisation temps réel entre formulaire et aperçu sans rechargement → utilisation de Context API (ResumeInfoContext, ResumeStyleContext) pour le partage d’état global.",
             "Offrir une expérience d’édition fluide et intuitive des expériences professionnelles → intégration d’un éditeur WYSIWYG avec boutons de génération IA injectant automatiquement le contenu généré.",
+            "Migration de l’API OpenAI vers GEMINI → adaptation rapide du code backend pour gérer les différences d’API tout en maintenant la qualité de génération.",
+            "Migration de CREATE REACT APP vers Vite → refonte de la configuration du projet, ajustement des scripts de développement et de build, et résolution des problèmes de compatibilité avec les dépendances existantes."
         ],
         "impact": "Resume AI accélère la création de CV en combinant génération de contenu IA et modèles pré-formatés. L’application aide les utilisateurs à produire des CV professionnels en quelques minutes, améliore la qualité rédactionnelle et réduit le stress de la rédaction manuelle. Projet prêt pour la production et extensible avec de nouveaux templates et export PDF.",
         "links": {
-            demo: "",
+            demo: "https://resume.hanseroland.com",
             frontend: "https://github.com/hanseroland/resume-ai-frontend",
             backend: "https://github.com/hanseroland/resume-ai",
             code: ""
