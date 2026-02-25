@@ -24,8 +24,8 @@ export default function Home({ themeMode }) {
     <>
       <Head>
         <title>Hanse Roland Parfait - Développeur Web FullStack</title>
-        <meta name="description" content=" Développeur Fullstack passionné avec plus de 3 ans d’expérience développement web Fullstack. Je conçois des applications web et mobiles modernes,
-                performantes et esthétiques" />
+        <meta name="description" content="Ingénieur Full-Stack spécialisé dans la digitalisation
+          Je vous aide à transformer vos opérations en systèmes digitaux performants et évolutifs." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="googlebot" content="notranslate" />
         <meta name="google" content="notranslate" />

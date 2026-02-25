@@ -17,6 +17,31 @@ const ProfileText = () => {
             <Typography
                 variant="body1"
                 sx={{
+                    mb: 1,
+                    fontSize: { xs: '1rem', md: '1.1rem' },
+                    color: theme.palette.text.primary,
+                    lineHeight: 1.6,
+                    textAlign: 'justify',
+                }}
+            >
+                Ingénieur Full-Stack spécialisé dans la digitalisation
+                Je vous aide à transformer vos opérations en systèmes digitaux performants et évolutifs.
+            </Typography>
+            <Typography component="div">
+                <span> J’interviens sur :</span>
+            </Typography>
+            <Typography component="div" ml={3} >
+                <ul>
+                    <li>Automatisation des processus métier</li>
+                    <li>Conception de plateformes SaaS, applications web et sites web</li>
+                    <li>Développement d’applicatins mobiles (React Native / Expo)</li>
+                    <li>Optimisation SEO technique et performance</li>
+                </ul>
+            </Typography>
+            <Typography
+                variant="body1"
+                mt={1}
+                sx={{
                     mb: 2,
                     fontSize: { xs: '1rem', md: '1.1rem' },
                     color: theme.palette.text.primary,
@@ -24,10 +49,12 @@ const ProfileText = () => {
                     textAlign: 'justify',
                 }}
             >
-                Développeur Fullstack passionné avec plus de 3 ans d’expérience développement web Fullstack. Je conçois des applications web et mobiles modernes,
-                performantes et esthétiques, avec un accent sur l’expérience utilisateur. Toujours à la recherche de solutions innovantes,
-                je combine expertise technique et sens du design pour créer des produits qui se démarquent.
+                Ancien Tech Lead, j’ai piloté des projets stratégiques : refonte d’un système hospitalier, développement de CRM et création de plateformes SaaS complètes (web + mobile).<br />
+                Ma force : penser en systèmes et concevoir des solutions cohérentes, du back-end jusqu’à l’expérience utilisateur.<br />
+                Stack principale : MERN (MERN (MongoDB Express React Node.js) , Next.js, Expo (React-Native), SEO technique.
             </Typography>
+
+
 
             <Box sx={{ display: 'flex', gap: 3, mt: 2 }}>
                 <Link

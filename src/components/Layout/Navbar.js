@@ -7,6 +7,8 @@ import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import Link from 'next/link';
 import { Typography, useTheme } from '@mui/material';
 import { Coffee } from '@mui/icons-material';
@@ -24,12 +26,50 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function Navbar({ themeMode, setThemeMode }) {
     const theme = useTheme();
 
+    // États pour le son
+    const [isAudioOn, setIsAudioOn] = React.useState(true);
+    const audioRef = React.useRef(null);
 
+    const sounds = {
+        light: '/sound/AMBBird_Reveil.mp3',
+        dark: '/sound/ANMLInsc_Insecte.mp3'
+    };
 
     const toggleTheme = () => {
         setThemeMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
     };
 
+
+    React.useEffect(() => {
+        // Création de l'instance Audio si elle n'existe pas
+        if (!audioRef.current) {
+            audioRef.current = new Audio(sounds[themeMode]);
+            audioRef.current.loop = true;
+        }
+
+        // Mise à jour de la source quand le thème change
+        audioRef.current.src = sounds[themeMode];
+        audioRef.current.load();
+
+        if (isAudioOn) {
+            // Le play() peut échouer si pas d'interaction utilisateur préalable
+            audioRef.current.play().catch(err => console.log("Autoplay bloqué par le navigateur"));
+        }
+
+        return () => {
+            if (audioRef.current) audioRef.current.pause();
+        };
+    }, [themeMode]);
+
+    // oggle ON/OFF manuel
+    const toggleAudio = () => {
+        if (isAudioOn) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.play();
+        }
+        setIsAudioOn(!isAudioOn);
+    };
 
 
     return (
@@ -69,16 +109,16 @@ export default function Navbar({ themeMode, setThemeMode }) {
                             alignItems: 'center',
                         }}
                     >
-                        <IconButton
-                            onClick={toggleTheme}
-                            color={theme.palette.text.primary}
+                        {/* Bouton Son */}
+                        <IconButton onClick={toggleAudio} color="inherit" sx={{ color: theme.palette.text.primary }}>
+                            {isAudioOn ? <VolumeUpIcon /> : <VolumeOffIcon />}
+                        </IconButton>
 
-                        >
-                            {
-                                themeMode === 'light' ?
-                                    <Brightness4Icon color={theme.palette.text.primary} />
-                                    :
-                                    <Brightness7Icon color={theme.palette.text.primary} />
+                        <IconButton onClick={toggleTheme} color={theme.palette.text.primary} >
+                            {themeMode === 'light' ?
+                                <Brightness4Icon color={theme.palette.text.primary} />
+                                :
+                                <Brightness7Icon color={theme.palette.text.primary} />
                             }
                         </IconButton>
                     </Box>
