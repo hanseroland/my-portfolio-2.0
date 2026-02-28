@@ -8,14 +8,14 @@ const experiences = [
         title: 'Freelance | Développeur Full Stack',
         company: 'Nana Head Spa',
         location: '- France',
-        dates: 'Avr 2023 - Sept 2023',
+        dates: 'Avr 2025 - Sept 2025',
     },
     {
         icon: '/images/taager-logo.png',
         title: 'Freelance | Intégrateur WordPress',
         company: 'Shine Skin Bar',
         location: '- Dakar',
-        dates: 'Mars 2023 - Août 2023',
+        dates: 'Mars 2025 - Août 2025',
     },
 
     {
